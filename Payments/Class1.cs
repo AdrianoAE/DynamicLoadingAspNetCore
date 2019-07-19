@@ -27,13 +27,7 @@ namespace Microsoft.Extensions.DependencyInjection
         public Payments()
         {
             _paymentMethods = HotReloadManager<IPaymentMethod>.InitializeBasePath("Plugins");
-            _paymentMethods.AssemblyUnloaded += OnAssemblyUnloaded;
             //_paymentMethods = HotReloadManager<IPaymentMethod>.InitializeFullPath(@"PATH\bin\Debug\netcoreapp3.0\Plugins\");
-        }
-
-        private void OnAssemblyUnloaded(AssemblyLoadContext obj)
-        {
-            //assembly unloaded
         }
     }
 

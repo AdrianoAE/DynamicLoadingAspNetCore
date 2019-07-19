@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DotNetCorePlugins\src\Plugins\McMaster.NETCore.Plugins.csproj" />
+    <ProjectReference Include="..\..\DotNetCorePlugins2\src\Plugins\McMaster.NETCore.Plugins.csproj" />
   </ItemGroup>
 
 </Project>

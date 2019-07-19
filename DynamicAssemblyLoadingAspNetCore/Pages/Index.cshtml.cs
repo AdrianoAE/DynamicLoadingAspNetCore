@@ -12,18 +12,18 @@ namespace DynamicAssemblyLoadingAspNetCore.Pages
             _payments = payments;
         }
 
-        public string asd { get; set; }
+        public string loaded { get; set; }
 
         public void OnGet()
         {
-            string teste = "";
+            string test = "";
 
             foreach (var item in _payments.PaymentMethods)
             {
-                teste += $" - {item.Value.Name}\n";
+                test += $"{item.Key} - {item.Value.Name}\n";
             }
 
-            asd = teste;
+            loaded = test;
         }
     }
 }

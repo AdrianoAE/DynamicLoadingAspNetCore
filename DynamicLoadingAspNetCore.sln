@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyPay", "EasyPay\EasyPay.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicAssemblyLoadingAspNetCore", "DynamicAssemblyLoadingAspNetCore\DynamicAssemblyLoadingAspNetCore.csproj", "{0D2061C1-DEC9-4CDC-98BC-7FFA667BF354}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "McMaster.NETCore.Plugins", "..\DotNetCorePlugins\src\Plugins\McMaster.NETCore.Plugins.csproj", "{5425EC24-D1EA-4A3A-AFA6-0398A6CD0ABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "McMaster.NETCore.Plugins", "..\DotNetCorePlugins2\src\Plugins\McMaster.NETCore.Plugins.csproj", "{63CED76A-0685-4376-A53E-F932A1CA833E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{0D2061C1-DEC9-4CDC-98BC-7FFA667BF354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D2061C1-DEC9-4CDC-98BC-7FFA667BF354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D2061C1-DEC9-4CDC-98BC-7FFA667BF354}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5425EC24-D1EA-4A3A-AFA6-0398A6CD0ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5425EC24-D1EA-4A3A-AFA6-0398A6CD0ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5425EC24-D1EA-4A3A-AFA6-0398A6CD0ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5425EC24-D1EA-4A3A-AFA6-0398A6CD0ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CED76A-0685-4376-A53E-F932A1CA833E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CED76A-0685-4376-A53E-F932A1CA833E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CED76A-0685-4376-A53E-F932A1CA833E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CED76A-0685-4376-A53E-F932A1CA833E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
