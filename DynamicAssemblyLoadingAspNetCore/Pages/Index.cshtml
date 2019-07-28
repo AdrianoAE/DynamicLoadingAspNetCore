@@ -8,5 +8,35 @@
         <h1 class="display-4">Hot Reload Example</h1>       
     </div>
     <span style="white-space: pre-line">
-        @Model.loaded
+        @Model.ActiveModules
     </span>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Provider
+                </th>
+                <th>
+                    IsActive
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.providers)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    <a asp-controller="module" asp-action="activatemodule" asp-route-name="@item.Name">Activate (press F5 after)</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <input id="Button1" type="button" value="button" onclick=""/>

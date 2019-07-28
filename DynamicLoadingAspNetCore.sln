@@ -5,13 +5,17 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payments", "Payments\Payments.csproj", "{39A81EB3-09E9-4626-9BB0-2268595E6C41}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paypal", "Paypal\Paypal.csproj", "{8DE023DA-4261-4A7D-B448-7FFE53C0672F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braintree", "Paypal\Braintree.csproj", "{8DE023DA-4261-4A7D-B448-7FFE53C0672F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyPay", "EasyPay\EasyPay.csproj", "{DDF7C231-F0D2-4A92-9786-EC82AFCF28B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicAssemblyLoadingAspNetCore", "DynamicAssemblyLoadingAspNetCore\DynamicAssemblyLoadingAspNetCore.csproj", "{0D2061C1-DEC9-4CDC-98BC-7FFA667BF354}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "McMaster.NETCore.Plugins", "..\DotNetCorePlugins2\src\Plugins\McMaster.NETCore.Plugins.csproj", "{63CED76A-0685-4376-A53E-F932A1CA833E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payments", "Payments", "{52F729C7-E3EF-43D0-80E8-204914CA559C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{6771F0EE-EF19-422D-9F5D-1EF93B17F545}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "McMaster.NETCore.Plugins", "..\DotNetCorePlugins\src\Plugins\McMaster.NETCore.Plugins.csproj", "{A2466A80-F3DE-48A8-BBE3-D63FD6E899EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,13 +39,19 @@ Global
 		{0D2061C1-DEC9-4CDC-98BC-7FFA667BF354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D2061C1-DEC9-4CDC-98BC-7FFA667BF354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D2061C1-DEC9-4CDC-98BC-7FFA667BF354}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63CED76A-0685-4376-A53E-F932A1CA833E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63CED76A-0685-4376-A53E-F932A1CA833E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63CED76A-0685-4376-A53E-F932A1CA833E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63CED76A-0685-4376-A53E-F932A1CA833E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2466A80-F3DE-48A8-BBE3-D63FD6E899EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2466A80-F3DE-48A8-BBE3-D63FD6E899EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2466A80-F3DE-48A8-BBE3-D63FD6E899EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2466A80-F3DE-48A8-BBE3-D63FD6E899EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39A81EB3-09E9-4626-9BB0-2268595E6C41} = {52F729C7-E3EF-43D0-80E8-204914CA559C}
+		{8DE023DA-4261-4A7D-B448-7FFE53C0672F} = {6771F0EE-EF19-422D-9F5D-1EF93B17F545}
+		{DDF7C231-F0D2-4A92-9786-EC82AFCF28B2} = {6771F0EE-EF19-422D-9F5D-1EF93B17F545}
+		{6771F0EE-EF19-422D-9F5D-1EF93B17F545} = {52F729C7-E3EF-43D0-80E8-204914CA559C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {958EAB2B-224D-4AEB-B202-4363CD48F249}

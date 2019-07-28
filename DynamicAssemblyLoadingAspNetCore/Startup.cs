@@ -23,11 +23,11 @@ namespace DynamicAssemblyLoadingAspNetCore
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
             });
-
-
+            
             services.AddRazorPages();
+            services.AddControllers().AddControllersAsServices();
 
-            services.AddPayments();
+            services.AddPayments(@"Plugins\Payments", Configuration.GetConnectionString("connectionString"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +43,6 @@ namespace DynamicAssemblyLoadingAspNetCore
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -56,6 +55,7 @@ namespace DynamicAssemblyLoadingAspNetCore
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/");
             });
         }
     }
