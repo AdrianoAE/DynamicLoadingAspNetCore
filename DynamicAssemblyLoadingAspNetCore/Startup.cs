@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,7 @@ namespace DynamicAssemblyLoadingAspNetCore
             });
             
             services.AddRazorPages();
+            services.AddMediatR(GetType().Assembly);
             services.AddControllers().AddControllersAsServices();
 
             services.AddPayments(@"Plugins\Payments", Configuration.GetConnectionString("connectionString"));

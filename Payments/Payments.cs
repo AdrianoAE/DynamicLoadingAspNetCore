@@ -1,5 +1,8 @@
 ﻿using McMaster.NETCore.Plugins.Manager;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Payments.Entities;
 using Payments.Interfaces;
 using Payments.Persistence;
@@ -31,7 +34,7 @@ namespace Payments
 
         //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
-        public PaymentsManager(string path, string connectionString)
+        public PaymentsManager(IServiceCollection services, IConfiguration configuration, IMediator med, string path, string connectionString)
         {
             PaymentsDbContext.Configure(connectionString);
 
@@ -41,7 +44,7 @@ namespace Payments
             var activeMethods = paymentMethods.Where(IsValidProvider).Select(p => p.Name).ToList();
 
             _providers = FluentModuleManager<IProvider>.WithPath(path)
-                .WithModuleParameters(connectionString)
+                .WithModuleParameters(services, connectionString)
                 .EnableHotReload()
                 .EnableOnLoadSetInactive()
                 .SetModulesToLoadAtStartup(activeMethods)

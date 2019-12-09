@@ -1,10 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Payments.Migrations
 {
-    public partial class initial : Migration
+    public partial class teste : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,15 +15,26 @@ namespace Payments.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: false),
-                    IsActive = table.Column<bool>(nullable: false),
-                    Created = table.Column<DateTime>(nullable: false),
-                    LastModified = table.Column<DateTime>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Providers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProvidersTranslations",
+                schema: "Payments",
+                columns: table => new
+                {
+                    ProvidersId = table.Column<int>(nullable: false),
+                    LanguageId = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(maxLength: 500, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProvidersTranslations", x => new { x.ProvidersId, x.LanguageId });
                 });
 
             migrationBuilder.CreateTable(
@@ -35,9 +44,7 @@ namespace Payments.Migrations
                 {
                     ProviderId = table.Column<int>(nullable: false),
                     PropertyName = table.Column<string>(nullable: false),
-                    Value = table.Column<string>(nullable: true),
-                    Created = table.Column<DateTime>(nullable: false),
-                    LastModified = table.Column<DateTime>(nullable: false)
+                    Value = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,6 +63,10 @@ namespace Payments.Migrations
         {
             migrationBuilder.DropTable(
                 name: "ProvidersConfiguration",
+                schema: "Payments");
+
+            migrationBuilder.DropTable(
+                name: "ProvidersTranslations",
                 schema: "Payments");
 
             migrationBuilder.DropTable(

@@ -1,4 +1,8 @@
-﻿using Braintree.Persistence;
+﻿using Braintree.Api;
+using Braintree.Persistence;
+using MediatR;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Payments;
 using Payments.Entities;
 using Payments.Extensions;
@@ -23,7 +27,7 @@ namespace Braintree
 
         //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
-        public Braintree(string connectionString)
+        public Braintree(IServiceCollection services, IConfiguration configuration, IMediator med, string connectionString)
         {
             Image = "location";
 
@@ -33,6 +37,8 @@ namespace Braintree
                 .Add(new ProviderConfiguration(nameof(ClientId)))
                 .Add(new ProviderConfiguration(nameof(SecretId)))
                 .Add(new ProviderConfiguration(nameof(Image)));
+
+            services.AddTransient<TestController>();
         }
     }
 }
