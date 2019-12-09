@@ -1,6 +1,6 @@
 # DynamicLoadingAspNetCore
 
-Just small playground project, what it does:
+Just small playground project:
 * Open SSMS/Azure Data Studio (or any program that allow you to connect to a database), connect to the local server: (localdb)\MSSQLLocalDB
 * Open the Solution and go to the WebsiteFolder\bin\Debug\netcoreapp3.0\plugins\Payments
 * Move both dlls to another folder / desktop
