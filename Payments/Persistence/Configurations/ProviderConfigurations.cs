@@ -37,7 +37,7 @@ namespace Payments.Persistence.Configurations
                 y.SetAnnotation(item.Name, item.Value);
             }
 
-            return new PropertyBuilder<string>(y);
+            return new PropertyBuilder<string>(y).IsRequired(!teste.IsNullable);
         }
     }
 }

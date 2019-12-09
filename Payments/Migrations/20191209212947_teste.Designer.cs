@@ -9,7 +9,7 @@ using Payments.Persistence;
 namespace Payments.Migrations
 {
     [DbContext(typeof(PaymentsDbContext))]
-    [Migration("20191209211245_teste")]
+    [Migration("20191209212947_teste")]
     partial class teste
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,6 +30,7 @@ namespace Payments.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
 

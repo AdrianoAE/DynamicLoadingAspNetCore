@@ -30,7 +30,7 @@ namespace Payments.Migrations
                 {
                     ProvidersId = table.Column<int>(nullable: false),
                     LanguageId = table.Column<int>(nullable: false),
-                    Name = table.Column<string>(maxLength: 500, nullable: true)
+                    Name = table.Column<string>(maxLength: 500, nullable: false)
                 },
                 constraints: table =>
                 {
