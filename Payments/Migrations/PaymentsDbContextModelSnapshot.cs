@@ -19,24 +19,6 @@ namespace Payments.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Payments.ConfigurationHelpers.CustomDbContext<Payments.Persistence.PaymentsDbContext>+Translation", b =>
-                {
-                    b.Property<int>("ProvidersId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LanguageId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(500)")
-                        .HasMaxLength(500);
-
-                    b.HasKey("ProvidersId", "LanguageId");
-
-                    b.ToTable("ProvidersTranslations");
-                });
-
             modelBuilder.Entity("Payments.Entities.Provider", b =>
                 {
                     b.Property<int>("Id")
@@ -46,6 +28,9 @@ namespace Payments.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

@@ -1,4 +1,5 @@
 ﻿using EasyPay.Persistence;
+using Microsoft.Extensions.DependencyInjection;
 using Payments;
 using Payments.Entities;
 using Payments.Extensions;
@@ -20,7 +21,7 @@ namespace EasyPay
 
         //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
-        public EasyPay(string connectionString)
+        public EasyPay(IServiceCollection services, string connectionString)
         {
             Image = "location";
 

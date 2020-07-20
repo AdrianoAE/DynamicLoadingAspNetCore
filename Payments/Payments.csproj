@@ -6,43 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20191209201244_teste.cs" />
-    <Compile Remove="Migrations\20191209201244_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209201335_teste.cs" />
-    <Compile Remove="Migrations\20191209201335_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209201412_teste.cs" />
-    <Compile Remove="Migrations\20191209201412_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209201534_teste.cs" />
-    <Compile Remove="Migrations\20191209201534_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209201711_teste.cs" />
-    <Compile Remove="Migrations\20191209201711_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209201831_teste.cs" />
-    <Compile Remove="Migrations\20191209201831_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209202118_teste.cs" />
-    <Compile Remove="Migrations\20191209202118_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209202213_teste.cs" />
-    <Compile Remove="Migrations\20191209202213_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209202240_teste.cs" />
-    <Compile Remove="Migrations\20191209202240_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209202700_teste.cs" />
-    <Compile Remove="Migrations\20191209202700_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209203059_teste.cs" />
-    <Compile Remove="Migrations\20191209203059_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209203341_teste.cs" />
-    <Compile Remove="Migrations\20191209203341_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209203430_teste.cs" />
-    <Compile Remove="Migrations\20191209203430_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209203641_teste.cs" />
-    <Compile Remove="Migrations\20191209203641_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209203804_teste.cs" />
-    <Compile Remove="Migrations\20191209203804_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209204315_teste.cs" />
-    <Compile Remove="Migrations\20191209204315_teste.Designer.cs" />
-    <Compile Remove="Migrations\20191209211245_teste.cs" />
-    <Compile Remove="Migrations\20191209211245_teste.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MediatR" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />

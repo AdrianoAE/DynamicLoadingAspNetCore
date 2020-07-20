@@ -2,7 +2,7 @@
 
 namespace Payments.Migrations
 {
-    public partial class teste : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,25 +16,12 @@ namespace Payments.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
                     IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Providers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ProvidersTranslations",
-                schema: "Payments",
-                columns: table => new
-                {
-                    ProvidersId = table.Column<int>(nullable: false),
-                    LanguageId = table.Column<int>(nullable: false),
-                    Name = table.Column<string>(maxLength: 500, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProvidersTranslations", x => new { x.ProvidersId, x.LanguageId });
                 });
 
             migrationBuilder.CreateTable(
@@ -63,10 +50,6 @@ namespace Payments.Migrations
         {
             migrationBuilder.DropTable(
                 name: "ProvidersConfiguration",
-                schema: "Payments");
-
-            migrationBuilder.DropTable(
-                name: "ProvidersTranslations",
                 schema: "Payments");
 
             migrationBuilder.DropTable(

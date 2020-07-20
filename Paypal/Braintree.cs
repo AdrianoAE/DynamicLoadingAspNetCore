@@ -27,7 +27,7 @@ namespace Braintree
 
         //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
-        public Braintree(IServiceCollection services, IConfiguration configuration, IMediator med, string connectionString)
+        public Braintree(IServiceCollection services, /*IConfiguration configuration, IMediator med,*/ string connectionString)
         {
             Image = "location";
 
